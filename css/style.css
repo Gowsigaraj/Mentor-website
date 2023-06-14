@@ -4,8 +4,11 @@
 	box-sizing:border-box;
 	font-family: 'Roboto', sans-serif;
 }
+html{
+	font-size:16px;
+}
 .container{
-	width:1240px;
+	width:1340px;
 	margin:0 auto;
 	padding-left:15px;
 	padding-right:15px;
@@ -62,8 +65,8 @@
 .flex-item8{
 	width:66.64%;
 	flex:0 0 auto;
-	padding-left:-15px;
-	padding-right:-15px;
+	padding-left:15px;
+	padding-right:15px;
 }
 .flex-item9{
 	width:74.97%;
@@ -95,7 +98,7 @@
 	width:auto;
 	height:100px;
 	padding:30px 0px;
-	z-index:1;
+	z-index:999;
 	position:sticky;
 	top:0;
 	
@@ -103,7 +106,7 @@
 .text_sec{
 	width:auto;
 	height:50px;
-	font-size:30px;
+	font-size:1.87rem;
 	color:#5fcf80;
 }
 .men{
@@ -118,10 +121,10 @@
 	width:auto;
 	height:50px;
 	display:flex;
-	justify-content:space-between;
+	justify-content:flex-end;
 
 }
-.nav_sec ul{
+.nav_sec .nav{
 		display:flex;
 		list-style-type:none;
 		justify-content:space-between;
@@ -139,8 +142,75 @@
 }
 ul .home:hover{
 	color:#6bd389;
-	transition:all 1s ease;
+	transition:0.3s;
 }
+.drop{
+list-style-type:none;
+visibility:hidden;
+opacity:0;
+background-color:white;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+padding:20px 20px;
+position:absolute;
+top:0px;
+transition:0.3s;
+}
+.nav li:nth-child(7):hover .drop{
+	visibility:visible;
+	opacity:1;
+	top:40px;
+
+}
+.ddd{
+	width:150px;
+}
+.down{
+
+	position:relative;
+}
+	
+.dropdown{
+	text-decoration:none;
+	font-size:18px;
+    color:#57615b;
+	
+}
+.fa-angle-down,.fa-angle-right{
+	line-height:5px;
+	font-size:12px;
+	
+}
+
+.deepdropdown{
+list-style-type:none;
+transform:translateX(120px) translateY(-18px);
+position:absolute;
+background-color:white;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+width:200px;
+text-align:center;
+padding:10px 0px;
+visibility:hidden;
+opacity:0;
+transition:0.3s;
+left:0;
+}
+.deepdropdown li a{
+text-decoration:none;
+color:#57615b;
+font-size:18px;
+}
+
+.drop .ddd:hover .deepdropdown{
+	visibility:visible;
+	opacity:1;
+	left:50px;
+}
+
+.nav_sec li {
+	position:relative;
+}
+
 
 .get{
 	text-decoration:none;
@@ -304,7 +374,6 @@ ul .home:hover{
 	.mentor_con{
 		background-color:#5fcf80;
 		width:auto;
-		height:400px;
 		padding:40px 20px;
 	}
 	.mentor_con h2{
@@ -397,6 +466,14 @@ ul .home:hover{
 			gap:10px;
 			align-items:center;
 			
+		}
+		.box-con:hover{
+			border-color:#5fcf80;
+			transition:0.3s;
+		}
+		.box-con:hover h3 a{
+		    color: #5fcf80;
+			transition:0.3s;
 		}
 		h3{
 			font-size:20px;
@@ -646,7 +723,12 @@ ul .home:hover{
 				transition:0.3s;
 			}
 			.useful:hover{
-				color:#5fcf80;;
+				color:#5fcf80;
+			}
+			.fa-chevron-right{
+				font-size:13px;
+				color:#5fcf80;
+				line-height:0px;
 			}
 			li{
 				list-style-type:none;
@@ -671,28 +753,48 @@ ul .home:hover{
 				text-align:left;
 				
 			}
-			 input[type=submit]{
-				    position: absolute;
-					top: -1px;
-					right: -1px;
-					bottom: -1px;
-					border: 0;
-					background: none;
-					font-size: 16px;
-					padding: 0 20px 2px 20px;
-					background: #5fcf80;
-					color: #fff;
-					transition: 0.3s;
-					border-radius:25px 25px;
-					box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
-}
+			 /* input[type=submit]{ */
+				    /* position: absolute; */
+					/* top: -1px; */
+					/* right: -1px; */
+					/* bottom: -1px; */
+					/* border: 0; */
+					/* background: none; */
+					/* font-size: 16px; */
+					/* padding: 0 20px 2px 20px; */
+					/* background: #5fcf80; */
+					/* color: #fff; */
+					/* transition: 0.3s; */
+					/* border-radius:25px 25px; */
+					/* box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1); */
+
 				
+			/* } */
+			.sub{
+				height:53px;
+				width:125px;
+				border-radius:25px 25px;
+				border:2px solid;
+				border:none;
+				background-color:#5fcf80;
+				box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
+				position: absolute; 
+				top: -1px;
+				right: -1px;
+				bottom: -1px; 
+				font-size: 16px; 
+				padding: 0 20px 2px 20px;
+				background: #5fcf80;
+				color: #fff;
+				transition: 0.3s;
+				text-align:center;
+				line-height:53px;
 			}
-			
-			 input[type=submit]:hover{
-				 background-color:#3ac162;
-				 cursor:pointer;
-			 }
+			.sub{
+				text-decoration:none;
+			}
+				
+				
 			 input[type=email]{
 				padding:7px 20px;
 				border:none;
