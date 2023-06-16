@@ -292,22 +292,21 @@ font-size:18px;
  .volup-sec{
 	 background-color:white;
 	 width:auto;
-	 padding:80px 0px;
+	 padding:40px 0px;
  }
  .volup_con{
 	 background-color:white;
 	 width:auto;
-	 height:400px;
  }
  .volup_con h2{
 	 color:#575757;
 	 font-size:25px;
-	 margin-bottom:20px;
+	 margin-bottom:10px;
  }
  .volup_con .lor{
 	  color:#5c5c5c;
 	 font-size:20px;
-	 margin-bottom:30px;
+	 margin-bottom:20px;
  }
  .li{
 	 color:#adadad;

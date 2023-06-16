@@ -234,9 +234,9 @@ justify-content:center !important;
 .order-2{
 	order:2;
 }
-.volup-sec{
-	margin-bottom:30px;
-}
+/* .volup-sec{ */
+	/* margin-bottom:30px; */
+/* } */
 .card_con{
 	height:550px;
 }
@@ -245,10 +245,10 @@ justify-content:center !important;
 }
 
 .footer_con{
-	text-align:center;
+	justify-content:flex-start;
 }
 .grow{
-justify-content:center !important;
+justify-content:flex-end !important;
 }
 .card_con{
 	height:auto;
@@ -265,5 +265,10 @@ justify-content:center !important;
 
 .row-gap-mb{
 	row-gap:20px;
+}
+
+
+
+
 
 }
